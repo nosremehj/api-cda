@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: postgres:14-alpine
+    environment:
+      - "POSTGRES_USER=cda"
+      - "POSTGRES_PASSWORD=123456"
+      - "POSTGRES_DB=cdadb"
+    ports:
+      - 5441:5432
+    volumes: 
+      - pg-data:/var/lib/postgresql/data
+volumes:
+  pg-data:
