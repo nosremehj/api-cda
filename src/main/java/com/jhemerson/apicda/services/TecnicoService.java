@@ -18,6 +18,7 @@ import com.jhemerson.apicda.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class TecnicoService {
+	
 	@Autowired
 	private TecnicoRepository repository;
 	@Autowired
