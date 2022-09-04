@@ -23,7 +23,7 @@ import com.jhemerson.apicda.domain.dtos.ClienteDTO;
 import com.jhemerson.apicda.services.ClienteService;
 
 @RestController
-@RequestMapping(value = "/clientes")
+@RequestMapping(path = "/clientes")
 public class ClienteResource {
 
 	@Autowired

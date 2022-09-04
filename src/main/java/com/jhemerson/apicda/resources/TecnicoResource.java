@@ -23,7 +23,7 @@ import com.jhemerson.apicda.domain.dtos.TecnicoDTO;
 import com.jhemerson.apicda.services.TecnicoService;
 
 @RestController
-@RequestMapping(value = "/tecnicos")
+@RequestMapping(path = "/tecnicos")
 public class TecnicoResource {
 
 	@Autowired
