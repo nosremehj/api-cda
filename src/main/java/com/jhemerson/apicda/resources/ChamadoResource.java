@@ -34,14 +34,14 @@ public class ChamadoResource {
 		return ResponseEntity.ok().body(new ChamadoDTO(obj));
 	}
 
-	@GetMapping(path = "/")
+	@GetMapping
 	public ResponseEntity<List<ChamadoDTO>> findAll() {
 		List<Chamado> list = service.findAll();
 		List<ChamadoDTO> listDTO = list.stream().map(obj -> new ChamadoDTO(obj)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);
 	}
 
-	@PostMapping(path = "/")
+	@PostMapping
 	public ResponseEntity<ChamadoDTO> create(@Valid @RequestBody ChamadoDTO objDTO) {
 		Chamado newObj = service.create(objDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/id").buildAndExpand(newObj.getId()).toUri();
