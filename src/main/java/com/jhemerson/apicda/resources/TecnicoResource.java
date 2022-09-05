@@ -36,7 +36,7 @@ public class TecnicoResource {
 		return ResponseEntity.ok().body(new TecnicoDTO(obj));
 	}
 
-	@GetMapping(path = "/")
+	@GetMapping
 	public ResponseEntity<List<TecnicoDTO>> findAll() {
 		List<Tecnico> list = service.findAll();
 		List<TecnicoDTO> listDTO = list.stream().map(obj -> new TecnicoDTO(obj)).collect(Collectors.toList());
@@ -44,8 +44,8 @@ public class TecnicoResource {
 	}
 	
 	@PreAuthorize("hasAnyRole('ADMIN')")
-	@PostMapping(path = "/")
-	public ResponseEntity<TecnicoDTO> create(@RequestBody TecnicoDTO objDTO) {
+	@PostMapping
+	public ResponseEntity<TecnicoDTO> create(@Valid @RequestBody TecnicoDTO objDTO) {
 		Tecnico newObj = service.create(objDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
