@@ -51,6 +51,7 @@ public class ClienteService {
 			objDTO.setSenha(encoder.encode(objDTO.getSenha()));
 		validaPorCpfEmail(objDTO);
 		oldObj = new Cliente(objDTO);
+		oldObj = new Cliente(objDTO);
 
 		return repository.save(oldObj);
 	}
@@ -59,7 +60,7 @@ public class ClienteService {
 		Cliente obj = findById(id);
 
 		if (obj.getChamados().size() > 0) {
-			throw new DataIntegrityViolationException("Técnico possui orden de serviço e não pode ser deletado!");
+			throw new DataIntegrityViolationException("Técnico possui ordem de serviço e não pode ser deletado!");
 		}
 
 		repository.deleteById(id);

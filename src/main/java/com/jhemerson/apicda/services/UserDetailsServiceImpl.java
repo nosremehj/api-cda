@@ -1,8 +1,11 @@
 package com.jhemerson.apicda.services;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,8 +16,8 @@ import com.jhemerson.apicda.repositories.PessoaRepository;
 import com.jhemerson.apicda.security.UserSS;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
-	
+public class UserDetailsServiceImpl implements UserDetailsService  {
+
 	@Autowired
 	private PessoaRepository repository;
 

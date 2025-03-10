@@ -3,18 +3,14 @@ package com.jhemerson.apicda.domain;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jhemerson.apicda.domain.enums.Prioridade;
 import com.jhemerson.apicda.domain.enums.Status;
+import jakarta.persistence.*;
 
-@Entity
+@jakarta.persistence.Entity
 public class Chamado implements Serializable{
 
 	private static final long serialVersionUID = 1L;

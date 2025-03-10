@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jhemerson.apicda.domain.Tecnico;
@@ -20,6 +21,7 @@ public class TecnicoDTO implements Serializable {
 	@NotNull(message = "O campo NOME é requerido")
 	protected String nome;
 	@NotNull(message = "O campo CPF é requerido")
+	@Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}|\\d{11}", message = "CPF inválido. Deve estar no formato 000.000.000-00 ou 00000000000")
 	protected String cpf;
 	@NotNull(message = "O campo EMAIL é requerido")
 	protected String email;
