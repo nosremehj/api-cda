@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 import com.jhemerson.apicda.services.BDService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
+// Eu não entendi muito bem essa classe de test
 @Configuration
 @Profile("test")
 public class TestConfig {
@@ -21,9 +21,5 @@ public class TestConfig {
 	public void instanciaDB() {
 		this.dbService.instanciaDB();
 	}
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    //Em teoria isso deveria funcionar, mas acho que ele tava tentando gerar a dependencia do BDService primeiro e por isso dava pau
 }

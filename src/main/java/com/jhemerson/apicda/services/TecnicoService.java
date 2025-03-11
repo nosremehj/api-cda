@@ -24,6 +24,7 @@ public class TecnicoService {
 	private TecnicoRepository repository;
 	@Autowired
 	private PessoaRepository pessoaRepository;
+	//Ai tava causando problema nessa injeção de dependecia aqui
 	@Autowired
 	private BCryptPasswordEncoder encoder;
 
