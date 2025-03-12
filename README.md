@@ -15,6 +15,3 @@ POO(Programação Orientada a Objetos). Também aplicando autenticação JWT(Jso
 - [@Jhemerson](https://github.com/nosremehj)
 
 
-## Cloud
-Link para consumo no front-end:
-https://apicda.herokuapp.com/
