@@ -1,5 +1,6 @@
 package com.jhemerson.apicda.domain;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,6 +13,8 @@ import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cliente extends Pessoa {
+
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@JsonIgnore

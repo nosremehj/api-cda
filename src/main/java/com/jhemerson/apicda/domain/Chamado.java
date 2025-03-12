@@ -10,7 +10,7 @@ import com.jhemerson.apicda.domain.enums.Prioridade;
 import com.jhemerson.apicda.domain.enums.Status;
 import jakarta.persistence.*;
 
-@jakarta.persistence.Entity
+@Entity
 public class Chamado implements Serializable{
 
 	private static final long serialVersionUID = 1L;

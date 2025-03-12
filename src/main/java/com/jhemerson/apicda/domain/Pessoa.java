@@ -1,5 +1,6 @@
 package com.jhemerson.apicda.domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -10,10 +11,15 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jhemerson.apicda.domain.enums.Perfil;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
 public class Pessoa implements Serializable{
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@Id
