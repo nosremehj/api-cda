@@ -3,6 +3,7 @@ package com.jhemerson.apicda.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 //Anotação component - ela especifica que a classe está no contexto do spring fazendo com que seja gerada e inetada ao rodar
