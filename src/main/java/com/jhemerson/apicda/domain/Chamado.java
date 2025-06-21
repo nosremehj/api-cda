@@ -2,17 +2,19 @@ package com.jhemerson.apicda.domain;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jhemerson.apicda.domain.enums.Prioridade;
 import com.jhemerson.apicda.domain.enums.Status;
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 @Entity
-@Data
-@EqualsAndHashCode
-public class Chamado {
+public class Chamado implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

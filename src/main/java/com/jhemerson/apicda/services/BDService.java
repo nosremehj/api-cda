@@ -3,9 +3,7 @@ package com.jhemerson.apicda.services;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.jhemerson.apicda.domain.Chamado;
@@ -24,7 +22,6 @@ public class BDService {
 	private ChamadoRepository chamadoRepository;
 	@Autowired
 	private PessoaRepository pessoaRepository;
-	//E nesse tbm, o que tava gerando o erro no teu test
 	@Autowired
 	private BCryptPasswordEncoder encoder;
 
